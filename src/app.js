@@ -9,7 +9,7 @@ const sanitizer = require('perfect-express-sanitizer');
 //* manegement errors / manejo de errores
 
 const globalErrorHandler = require('./controllers/error.controllers');
-const AppError = require('./utils/AppError');
+const AppError = require('./utils/appError');
 
 //* manegement rutes / manejo de rutas
 
@@ -46,6 +46,8 @@ if (process.env.NODE_ENV === 'development') {
 }
 
 //* Routes / Rutas
+
+app.use('/api/v1/', limiter);
 
 app.use('/api/v1/users', userRouter);
 app.use('/api/v1/odersRoutes', ordersRouter);
