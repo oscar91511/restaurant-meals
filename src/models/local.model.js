@@ -1,6 +1,8 @@
 const { DataTypes } = require('sequelize');
 const { db } = require('../database/config');
 
+//* Local of restorants / local de restaurantes
+
 const Local = db.define('Local', {
   id: {
     primaryKey: true,
