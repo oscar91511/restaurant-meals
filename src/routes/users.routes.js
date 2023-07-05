@@ -5,9 +5,9 @@ const validationsMiddleware = require('../middlewares/validation.middleware');
 const usersMiddleware = require('../middlewares/users.middleware');
 
 
-const router = Router();
-const { Router } = require('express');
 
+const { Router } = require('express');
+const router = Router();
 
 router.post(
   '/signup',

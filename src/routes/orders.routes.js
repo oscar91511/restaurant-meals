@@ -3,8 +3,9 @@ const ordersController = require('../controllers/orders.controllers');
 const authMiddleware = require('../middlewares/auth.middleware');
 const ordersMiddleware = require('../middlewares/orders.middleware');
 
-const router = Router();
+
 const { Router } = require('express');
+const router = Router();
 
 router.use(authMiddleware.protects);
 

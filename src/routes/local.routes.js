@@ -4,9 +4,9 @@ const validationsMiddleware = require('../middlewares/validation.middleware');
 const restaurantsMiddleware = require('../middlewares/local.middleware');
 const localRestController = require('../controllers/local.controller');
 
-const router = Router();
-const { Router } = require('express');
 
+const { Router } = require('express');
+const router = Router();
 
 router
   .route('/')

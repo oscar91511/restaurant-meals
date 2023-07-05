@@ -12,7 +12,7 @@ router.get('/', mealsControllers.findMeals);
 router.post(
   '/:id',
   authMiddleware.protects,
-  authMiddleware.restrictTo('admin'),
+  authMiddleware.restrictionTo('admin'),
   validationsMiddleware.MealValidation,
   LocalRestMiddleware.validationRestaurant,
   mealsControllers.createNewMeal

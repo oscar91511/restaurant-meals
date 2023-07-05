@@ -2,7 +2,7 @@ const Local = require('./local.model');
 const Users = require('./users.model');
 const Orders = require('./orders.model');
 const Meals = require('./meals.model');
-const Reviews = require('./reviews');
+const Reviews = require('./Reviews');
 
 const initModel = () => {
 
@@ -16,10 +16,10 @@ const initModel = () => {
     Orders.belongsTo(Meals);
   
     Local.hasMany(Meals);
-    Meals.belongsTo(Restaurants);
+    Meals.belongsTo(Local);
   
     Local.hasMany(Reviews);
-    Reviews.belongsTo(Restaurants);
+    Reviews.belongsTo(Local);
   };
   
   module.exports = initModel;

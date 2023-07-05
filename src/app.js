@@ -13,7 +13,7 @@ const AppError = require('./utils/appError');
 
 //* manegement rutes / manejo de rutas
 
-const userRouter = require('.routes/users.routes');
+const userRouter = require('./routes/users.routes');
 const ordersRouter = require('./routes/orders.routes');
 const localRouter = require('./routes/local.routes');
 const mealsRouter = require('./routes/meals.routes');

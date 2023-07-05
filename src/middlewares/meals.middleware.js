@@ -1,5 +1,5 @@
 const AppError = require('../utils/appError');
-const Local = require('../models/restaurants.model');
+const Local = require('../models/local.model');
 const catchAsync = require('../utils/catchAsync');
 const Meals = require('../models/meals.model');
 
