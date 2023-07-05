@@ -76,7 +76,7 @@ exports.updateLocalRestaurantValidation = [
 
 //* validation reviews, meals and orders / validacion de ordenes, pedidos y reseñas
 
-exports.reviewValidation = [
+exports.validationReviews = [
   body('comment').notEmpty().withMessage('Comment cannot be empty.'),
   body('rating')
     .notEmpty()

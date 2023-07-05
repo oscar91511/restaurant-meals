@@ -56,7 +56,7 @@ exports.createNewOrder = catchAsync(async (req, res, next) => {
 exports.updateOrder = catchAsync(async (req, res, next) => {
   const { order } = req;
 
-  const updatedOrders = await order.update({ status: 'completed' });
+  const updateTheOrders = await order.update({ status: 'completed' });
   res.status(201).json({
     status: 'success',
     message: 'Order has been updated.',
