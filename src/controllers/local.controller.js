@@ -27,11 +27,11 @@ exports.findLocal = catchAsync(async (req, res, next) => {
 });
 
 exports.createNewLocal = catchAsync(async (req, res, next) => {
-  const { name, addres, rating } = req.body;
+  const { name, address, rating } = req.body;
 
   const LocalRestaurant = await Local.findOne({
     where: {
-      addres: addres.toLowerCase(),
+      address: address.toLowerCase(),
     },
   });
 
@@ -41,7 +41,7 @@ exports.createNewLocal = catchAsync(async (req, res, next) => {
 
   const RestaurantLocal = await Local.create({
     name: name.toLowerCase(),
-    addres: addres.toLowerCase(),
+    address: address.toLowerCase(),
     rating,
   });
 
@@ -51,7 +51,7 @@ exports.createNewLocal = catchAsync(async (req, res, next) => {
     RestaurantLocal: {
       id: RestaurantLocal.id,
       name: RestaurantLocal.name,
-      addres: RestaurantLocal.addres,
+      address: RestaurantLocal.address,
       rating: RestaurantLocal.rating,
     },
   });

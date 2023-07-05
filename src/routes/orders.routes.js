@@ -11,11 +11,11 @@ router.use(authMiddleware.protects);
 
 router.post(
   '/',
-  validationsMiddleware.orderValidation,
+  validationsMiddleware.orderValidation, 
   ordersController.createNewOrder
 );
 
-router.get('/me', ordersController.findOrders);
+router.get('/me', ordersController.findOrders); //* find orders / ruta para encontrar ordenes
 
 router
   .use(
