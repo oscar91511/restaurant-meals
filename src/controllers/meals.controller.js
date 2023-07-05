@@ -49,13 +49,13 @@ exports.createNewMeal = catchAsync(async (req, res, next) => {
   const { id } = req.params;
   const { restaurant } = req;
 
-  const mealeath = await Meals.findOne({
+  const mealeat = await Meals.findOne({
     where: {
       name,
     },
   });
 
-  if (mealeath) {
+  if (mealeat) {
     return next(new AppError('The meal name are already in use!', 409));
   }
 
