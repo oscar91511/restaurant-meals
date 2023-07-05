@@ -15,7 +15,7 @@ const validFields = (req, res, next) => {
   next();
 };
 
-exports.createUserValidation = [
+exports.createValidationUsers = [
   body('name').notEmpty().withMessage('Name cannot be empty.'),
   body('email')
     .notEmpty()
@@ -30,7 +30,7 @@ exports.createUserValidation = [
   validFields,
 ];
 
-exports.updateUserValidation = [
+exports.updateValidationUsers = [
   body('name').notEmpty().withMessage('Name cannot be empty.'),
   body('email')
     .notEmpty()
@@ -40,7 +40,7 @@ exports.updateUserValidation = [
   validFields,
 ];
 
-exports.loginUserValidation = [
+exports.loginValidationUsers = [
   body('email')
     .notEmpty()
     .withMessage('Email cannot be empty.')

@@ -7,7 +7,7 @@ const jwt = require('jsonwebtoken');
 const { promisify } = require('util');
 
 //* protection of token / token de proteccion
-exports.protect = catchAsync(async (req, res, next) => {
+exports.protects = catchAsync(async (req, res, next) => {
   let token;
   if (
     req.headers.authorization &&

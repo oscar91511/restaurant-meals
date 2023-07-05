@@ -135,7 +135,7 @@ exports.findOrdersByUser = catchAsync(async (req, res, next) => {
   });
 });
 
-exports.deleteUser = catchAsync(async (req, res, next) => {
+exports.deletedUser = catchAsync(async (req, res, next) => {
   const { user } = req;
 
   await user.update({ status: 'disabled' });

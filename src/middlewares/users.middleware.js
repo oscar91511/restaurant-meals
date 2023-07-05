@@ -9,7 +9,7 @@ const Orders = require('../models/orders.model');
 
 //* validation usuers / validacion de usuarios
 
-exports.validUser = catchAsync(async (req, res, next) => {
+exports.validationUser = catchAsync(async (req, res, next) => {
   const { id } = req.params;
 
   const user = await Users.findOne({
