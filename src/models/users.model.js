@@ -5,11 +5,6 @@ const { db } = require('../database/config');
 const Users = db.define(
   'users',
   {
-    status: {
-      type: DataTypes.ENUM('active', 'disabled'),
-      allowNull: false,
-      defaultValue: 'active',
-    },
     id: {
       primaryKey: true,
       autoIncrement: true,
@@ -33,6 +28,11 @@ const Users = db.define(
       type: DataTypes.ENUM('normal', 'admin'),
       allowNull: true,
       defaultValue: 'normal',
+    },
+    status: {
+      type: DataTypes.ENUM('active', 'disabled'),
+      allowNull: false,
+      defaultValue: 'active',
     },
   },
   {

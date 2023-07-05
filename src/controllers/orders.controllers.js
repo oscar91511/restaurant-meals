@@ -56,7 +56,7 @@ exports.createNewOrder = catchAsync(async (req, res, next) => {
 exports.updateOrder = catchAsync(async (req, res, next) => {
   const { order } = req;
 
-  const updateTheOrders = await order.update({ status: 'completed' });
+  const updatedOrder = await order.update({ status: 'completed' });
   res.status(201).json({
     status: 'success',
     message: 'Order has been updated.',
@@ -85,7 +85,7 @@ exports.findOrders = catchAsync(async (req, res, next) => {
         model: Meals,
         include: [
           {
-            model: Restaurants,
+            model: Local,
             attributes: {
               exclude: ['status', 'updatedAt', 'createdAt'],
             },

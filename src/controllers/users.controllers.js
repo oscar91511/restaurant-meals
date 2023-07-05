@@ -131,7 +131,7 @@ exports.findOrdersByUser = catchAsync(async (req, res, next) => {
     },
     orders: user.orders,
     meals: user.meals,
-    restaurants: user.restaurants,
+    Local: user.Local,
   });
 });
 
